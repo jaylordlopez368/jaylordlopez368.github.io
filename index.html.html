@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional profile of Jaylord Molos — lead generation, customer service, appointment coordination, and insurance experience.">
+  <meta name="theme-color" content="#10243a">
+  <title>Jaylord Molos | Professional Portfolio</title>
+  <style>
+    :root {
+      --navy: #10243a;
+      --navy-2: #183550;
+      --teal: #1d8a88;
+      --teal-light: #e6f4f2;
+      --gold: #e6b65c;
+      --ink: #1b2937;
+      --muted: #657586;
+      --paper: #f6f8fa;
+      --white: #ffffff;
+      --line: #e3e9ee;
+      --shadow: 0 18px 45px rgba(16,36,58,.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif; line-height: 1.65;
+    }
+    a { color: inherit; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.94);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      max-width: 1120px; margin: auto; padding: 14px 24px; display: flex;
+      align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .brand { font-weight: 800; letter-spacing: .02em; color: var(--navy); text-decoration: none; }
+    .brand span { color: var(--teal); }
+    .navlinks { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+    .navlinks a { text-decoration: none; color: #526273; font-size: .91rem; font-weight: 600; }
+    .navlinks a:hover { color: var(--teal); }
+    .nav-cta { background: var(--navy); color: white !important; padding: 9px 16px; border-radius: 999px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin: auto; }
+    .hero {
+      background: radial-gradient(circle at 82% 20%, rgba(29,138,136,.28), transparent 28%),
+                  linear-gradient(125deg, var(--navy), #173b54);
+      color: white; padding: 88px 0 82px; overflow: hidden; position: relative;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 48px; align-items: center; }
+    .eyebrow { color: #9fe0d9; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; }
+    h1 { font-size: clamp(2.7rem, 6vw, 4.6rem); line-height: 1.06; margin: 14px 0 18px; letter-spacing: -.045em; }
+    .hero p { color: #d8e4ec; font-size: 1.12rem; max-width: 680px; margin: 0 0 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 19px;
+      border-radius: 9px; text-decoration: none; font-weight: 750; transition: .2s ease; }
+    .btn-primary { background: var(--gold); color: #172a3a; }
+    .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.04); }
+    .btn-outline { border: 1px solid rgba(255,255,255,.42); color: white; }
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+    .monogram-card {
+      justify-self: end; width: min(100%, 285px); aspect-ratio: 1; border-radius: 30px;
+      border: 1px solid rgba(255,255,255,.22); background: linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.04));
+      display: grid; place-items: center; box-shadow: 0 25px 65px rgba(0,0,0,.18); position: relative;
+    }
+    .monogram { font-size: 6.4rem; line-height: 1; font-weight: 850; letter-spacing: -.08em; color: white; }
+    .monogram-card:after { content: ""; position: absolute; width: 58px; height: 5px; border-radius: 5px; background: var(--gold); bottom: 42px; }
+    .quickfacts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .quickfacts span { font-size: .82rem; color: #dce8ef; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 6px 12px; }
+    section { padding: 76px 0; }
+    .section-kicker { color: var(--teal); font-weight: 800; text-transform: uppercase; letter-spacing: .16em; font-size: .74rem; }
+    h2 { color: var(--navy); font-size: clamp(1.9rem, 4vw, 2.65rem); line-height: 1.15; letter-spacing: -.035em; margin: 8px 0 16px; }
+    .section-intro { max-width: 730px; color: var(--muted); margin: 0 0 32px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; }
+    .about-copy p { color: #526273; margin-top: 0; }
+    .highlight {
+      background: var(--white); border: 1px solid var(--line); border-radius: 16px;
+      padding: 25px; box-shadow: var(--shadow);
+    }
+    .highlight h3 { margin: 0 0 14px; color: var(--navy); font-size: 1.05rem; }
+    .highlight ul { padding-left: 19px; margin: 0; color: #526273; }
+    .highlight li { margin: 7px 0; }
+    .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .skill {
+      background: white; border: 1px solid var(--line); border-radius: 13px; padding: 19px;
+      min-height: 110px; display: flex; flex-direction: column; justify-content: center;
+    }
+    .skill strong { color: var(--navy); font-size: .98rem; line-height: 1.35; }
+    .skill small { color: var(--muted); margin-top: 7px; font-size: .82rem; }
+    .experience { background: #eef3f6; }
+    .timeline { display: grid; gap: 16px; max-width: 900px; }
+    .job {
+      display: grid; grid-template-columns: 190px 1fr; gap: 25px; background: white;
+      border: 1px solid var(--line); border-radius: 15px; padding: 24px;
+    }
+    .job-date { color: var(--teal); font-size: .88rem; font-weight: 800; }
+    .job h3 { margin: 0 0 3px; color: var(--navy); font-size: 1.12rem; }
+    .company { color: var(--muted); font-weight: 650; font-size: .93rem; }
+    .job ul { color: #536475; margin: 13px 0 0; padding-left: 19px; }
+    .job li { margin: 5px 0; }
+    .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px; }
+    .education-card { background: white; border: 1px solid var(--line); border-radius: 15px; padding: 23px; }
+    .education-card h3 { color: var(--navy); margin: 0 0 5px; font-size: 1.05rem; }
+    .education-card p { margin: 0; color: var(--muted); }
+    .cta {
+      background: linear-gradient(120deg, #10243a, #1b5964); color: white; border-radius: 22px;
+      padding: 42px; display: flex; align-items: center; justify-content: space-between; gap: 28px;
+    }
+    .cta h2 { color: white; margin: 5px 0 9px; }
+    .cta p { color: #d4e3e8; margin: 0; max-width: 620px; }
+    .cta .btn { white-space: nowrap; }
+    footer { padding: 28px 0; color: #738191; font-size: .86rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 20px; }
+    .contact-line { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .contact-line a { color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.35); }
+    @media (max-width: 800px) {
+      .hero-grid, .about-grid { grid-template-columns: 1fr; }
+      .monogram-card { justify-self: start; width: 180px; border-radius: 22px; }
+      .monogram { font-size: 4.4rem; }
+      .monogram-card:after { bottom: 25px; width: 40px; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .job { grid-template-columns: 1fr; gap: 7px; }
+      .cta { align-items: flex-start; flex-direction: column; padding: 30px; }
+      .nav { align-items: flex-start; flex-direction: column; gap: 10px; }
+      .navlinks { gap: 14px; }
+    }
+    @media (max-width: 480px) {
+      .wrap { width: min(100% - 32px, 1120px); }
+      .hero { padding: 62px 0; }
+      section { padding: 58px 0; }
+      .skills-grid, .education-grid { grid-template-columns: 1fr; }
+      .navlinks a { font-size: .82rem; }
+    }
+    @media print {
+      .topbar, .hero-actions, .cta .btn { display: none; }
+      body { background: white; }
+      .hero { padding: 35px 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      section { padding: 30px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">JAYLORD<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Professional Profile · Open to Opportunities</div>
+          <h1>Jaylord<br>Molos</h1>
+          <p>Adaptable professional with experience in lead generation, customer service, appointment coordination, and personal and commercial lines insurance.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experience">Explore My Experience</a>
+            <a class="btn btn-outline" href="#contact">Get in Touch</a>
+          </div>
+          <div class="quickfacts">
+            <span>Lead Generation</span><span>Client Support</span><span>Appointment Coordination</span>
+          </div>
+        </div>
+        <div class="monogram-card" aria-label="Jaylord Molos initials">
+          <div class="monogram">JM</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-kicker">A little about me</div>
+        <h2>Reliable support. Clear communication. A willingness to grow.</h2>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>I have built my experience across roles that require communication, organization, attention to detail, and a client-focused approach. My background includes identifying and organizing potential leads, coordinating appointments, responding to customer concerns, and assisting clients with insurance-related needs.</p>
+            <p>I value being dependable, learning new systems, and taking ownership of my responsibilities. I approach new opportunities with an open mind and a commitment to doing quality work.</p>
+          </div>
+          <div class="highlight">
+            <h3>What I bring to a team</h3>
+            <ul>
+              <li>Professional and considerate client communication</li>
+              <li>Organized handling of information and administrative tasks</li>
+              <li>Appointment scheduling and coordination</li>
+              <li>Adaptability and willingness to learn new tools and processes</li>
+              <li>A responsible, service-oriented approach to daily work</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="background:#fff">
+      <div class="wrap">
+        <div class="section-kicker">Core capabilities</div>
+        <h2>Skills I can put to work</h2>
+        <p class="section-intro">A practical mix of customer-facing, coordination, research, and administrative skills developed through my professional experience.</p>
+        <div class="skills-grid">
+          <div class="skill"><strong>Lead Generation &amp; Prospect Research</strong><small>Identifying and organizing potential leads</small></div>
+          <div class="skill"><strong>Lead Qualification</strong><small>Reviewing prospect details and relevance</small></div>
+          <div class="skill"><strong>Customer Service</strong><small>Responding to inquiries and concerns</small></div>
+          <div class="skill"><strong>Appointment Coordination</strong><small>Scheduling, confirmations, and updates</small></div>
+          <div class="skill"><strong>CRM &amp; Scheduling Software</strong><small>Working with digital tracking and booking tools</small></div>
+          <div class="skill"><strong>Insurance Support</strong><small>Personal and commercial lines</small></div>
+          <div class="skill"><strong>Problem Solving</strong><small>Handling issues professionally</small></div>
+          <div class="skill"><strong>Time Management &amp; Organization</strong><small>Managing priorities and daily tasks</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="wrap">
+        <div class="section-kicker">Career background</div>
+        <h2>Professional experience</h2>
+        <p class="section-intro">Experience across lead generation, service coordination, and insurance support.</p>
+        <div class="timeline">
+          <article class="job">
+            <div class="job-date">April 2026 – November 2026</div>
+            <div>
+              <h3>Lead Generation Specialist Consultant</h3>
+              <div class="company">LEGAL MATCH</div>
+              <ul>
+                <li>Research and identify potential leads aligned with business targeting criteria.</li>
+                <li>Gather, organize, and maintain prospect information to support tracking and follow-up.</li>
+                <li>Review prospect details to assess lead relevance and potential fit.</li>
+                <li>Support clear and professional communication throughout the lead generation process.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">December 2024 – 2025</div>
+            <div>
+              <h3>Service Appointment Coordinator</h3>
+              <div class="company">Quorum</div>
+              <ul>
+                <li>Managed appointment scheduling to support timely and accurate customer bookings.</li>
+                <li>Developed and implemented an online booking system to streamline scheduling and reduce conflicts.</li>
+                <li>Handled customer inquiries and complaints professionally and empathetically.</li>
+                <li>Coordinated with technicians and customers about appointments, changes, and delays.</li>
+                <li>Monitored scheduling metrics and adjusted processes to improve efficiency and reduce wait times.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">August 2023 – 2024</div>
+            <div>
+              <h3>Personal and Commercial Lines Insurance Specialist</h3>
+              <div class="company">Grimes Insurance</div>
+              <ul>
+                <li>Assisted clients with personal and commercial insurance policies, changes, and renewals.</li>
+                <li>Conducted risk assessments and provided insurance solutions based on client needs.</li>
+                <li>Processed claims and completed administrative tasks to support timely resolution.</li>
+                <li>Maintained client relationships and supported customer satisfaction.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="section-kicker">Education</div>
+        <h2>Learning and development</h2>
+        <div class="education-grid">
+          <div class="education-card">
+            <h3>Diploma in Information Technology (DIT)</h3>
+            <p>Philippines College of Technology</p>
+          </div>
+          <div class="education-card">
+            <h3><strong>Humanities and Social Sciences (HUMSS)</strong>, K–12 Curriculum</h3>
+            <p>Teofilo V. Fernandez National High School</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="padding-top:30px">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <div class="eyebrow">Let's connect</div>
+            <h2>Have an opportunity in mind?</h2>
+            <p>I welcome the chance to discuss how my experience, work ethic, and willingness to learn could support your team.</p>
+            <div class="contact-line">
+              <a href="mailto:Jaylordlopez368@gmail.com">Jaylordlopez368@gmail.com</a>
+              <a href="tel:+639169880965">09169880965</a>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="mailto:Jaylordlopez368@gmail.com?subject=Career%20Opportunity">Email Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Jaylord Molos. All rights reserved.</span>
+      <span>Professional profile · Davao City, Philippines</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
